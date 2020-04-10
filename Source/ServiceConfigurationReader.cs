@@ -1,7 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 
 namespace ServiceConfigurationReader
 {
@@ -10,13 +8,7 @@ namespace ServiceConfigurationReader
         public IConfiguration Configuration(params string[] jsonFileNames)
         {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(((Func<string>)(() =>
-                            {
-                                var processModule = Process.GetCurrentProcess().MainModule;
-                                return processModule != null ? Path.GetDirectoryName(processModule.FileName) : throw new ApplicationException("processModule is not found");
-                            }
-                        )
-                    )())
+                .SetBasePath(new ServiceContentRoot.ServiceContentRoot().GetContentRoot())
                 .AddJsonFile("appsettings.json", false, true)
                 .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", true)
                 .AddEnvironmentVariables();
