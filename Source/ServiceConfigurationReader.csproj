@@ -4,12 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>NetExtensions</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Title>ServiceConfigurationReader</Title>
+    <Title>NetExtensions - ServiceConfigurationReader</Title>
     <Description>Configuration reader for services</Description>
-    <PackageProjectUrl>https://github.com/csalat/ServiceConfigurationReader</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/csalat/ServiceConfigurationReader</RepositoryUrl>
-    <PackageTags>Configuration reader, windows service, .net core</PackageTags>
-    <PackageId>ServiceConfigurationReader</PackageId>
+    <PackageProjectUrl>https://github.com/netextensions/ServiceConfigurationReader</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/netextensions/ServiceConfigurationReader</RepositoryUrl>
+    <PackageTags>NetExtensions, Configuration reader, windows service, .net core</PackageTags>
+    <PackageId>NetExtensions.ServiceConfigurationReader</PackageId>
     <PackageVersion>1.0.1</PackageVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>

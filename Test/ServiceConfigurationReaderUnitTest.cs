@@ -9,7 +9,7 @@ namespace ServiceConfigurationReader.Test
         [TestMethod]
         public void ServiceConfigurationReaderTest()
         {
-            var configurationReader = new ServiceConfigurationReader();
+            var configurationReader = new NetExtensions.ServiceConfigurationReader();
             var configuration = configurationReader.Configuration();
         }
     }
